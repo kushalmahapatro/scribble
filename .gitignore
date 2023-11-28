@@ -101,6 +101,7 @@ unlinked_spec.ds
 **/ios/Flutter/flutter_export_environment.sh
 **/ios/ServiceDefinitions.json
 **/ios/Runner/GeneratedPluginRegistrant.*
+**/ios/Runner/*.a
 
 # macOS
 **/Flutter/ephemeral/
@@ -141,3 +142,4 @@ pubspec.lock
 
 # FVM
 .fvm/flutter_sdk
+/target/

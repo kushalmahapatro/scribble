@@ -1,0 +1,3 @@
+[workspace]
+members = ["packages/peer2peer/native"]
+resolver = "2"
