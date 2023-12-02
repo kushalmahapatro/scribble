@@ -9,8 +9,8 @@ publish_to: "none"
 version: 0.0.1+1
 
 environment:
-  sdk: ">=3.0.5 <4.0.0"
-  flutter: ">=3.10.5 <4.0.0"
+  sdk: ">=3.0.0 <4.0.0"
+  flutter: ">=3.10.0 <4.0.0"
 
 dependencies:
   # Flutter SDK
@@ -38,7 +38,7 @@ dependencies:
   json_annotation: ^4.8.1
 
   # Networking
-  dio: ^5.3.4
+  dio: ^5.4.0
 
   # Persisting
   shared_preferences: ^2.2.2
@@ -55,8 +55,12 @@ dependencies:
   platform_info: ^4.0.2
   path: ^1.8.3
   path_provider: ^2.1.1
-  flutter_native_splash: ^2.3.5
+  flutter_native_splash: ^2.3.6
   ffi: ^2.1.0
+
+  # peer2peer
+  flutter_peer2peer: ^0.0.1
+  peer2peer: ^0.0.1
 
 dev_dependencies:
   # Testing
@@ -76,7 +80,7 @@ dev_dependencies:
   json_serializable: ^6.7.1
   drift_dev: ^2.13.2
   build_runner: ^2.4.7
-  melos: ^3.2.0
+  melos: ^3.3.0
 
 dependency_overrides:
   file: ^7.0.0

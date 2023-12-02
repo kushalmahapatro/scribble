@@ -21,6 +21,13 @@ command:
     workspaceChangelog: true
 
 scripts:
+
+  generate:
+    run: flutter pub global run intl_utils:generate 
+      && dart run build_runner build --delete-conflicting-outputs 
+      && cargo build
+    description: Generate code for a specific package in this project.
+
   analyze:
     exec: flutter analyze .
     description: Analyze a specific package in this project.
