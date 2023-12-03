@@ -143,4 +143,4 @@ pubspec.lock
 # FVM
 .fvm/flutter_sdk
 /target/
-/packages/lib_peer2peer/**
+/packages/lib_peer2peer
