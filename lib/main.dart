@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:peer2peer/peer2peer.dart';
 import 'package:sizzle_starter/src/core/utils/logger.dart';
 import 'package:sizzle_starter/src/feature/app/logic/app_runner.dart';
 import 'package:sizzle_starter/src/feature/initialization/logic/initialization_processor.dart';
@@ -7,6 +8,8 @@ import 'package:sizzle_starter/src/feature/initialization/model/dependencies.dar
 import 'package:sizzle_starter/src/feature/initialization/model/initialization_hook.dart';
 
 void main() {
+  Peer2PeerLib.ensureInitialized();
+
   final hook = InitializationHook.setup(
     onInitializing: _onInitializing,
     onInitialized: _onInitialized,

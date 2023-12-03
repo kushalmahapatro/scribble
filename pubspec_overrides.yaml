@@ -1,7 +1,7 @@
 # melos_managed_dependency_overrides: peer2peer,file
 dependency_overrides:
   flutter_peer2peer:
-    path: packages/flutter_peer2peer
+    path: packages/packages/flutter_peer2peer
   peer2peer:
-    path: packages/peer2peer
+    path: packages/packages/peer2peer
   file: ^7.0.0

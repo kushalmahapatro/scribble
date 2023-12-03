@@ -1,6 +1,0 @@
-# melos_managed_dependency_overrides: flutter_peer2peer,peer2peer
-dependency_overrides:
-  flutter_peer2peer:
-    path: ..
-  peer2peer:
-    path: ../../peer2peer

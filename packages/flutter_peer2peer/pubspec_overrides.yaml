@@ -1,5 +1,0 @@
-# melos_managed_dependency_overrides: peer2peer,file
-dependency_overrides:
-  file: ^7.0.0
-  peer2peer:
-    path: ../peer2peer

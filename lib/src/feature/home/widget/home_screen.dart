@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_peer2peer/flutter_peer2peer.dart';
 import 'package:sizzle_starter/src/core/localization/localization.dart';
 import 'package:sizzle_starter/src/feature/settings/widget/settings_scope.dart';
 
@@ -25,6 +26,21 @@ class HomeScreen extends StatelessWidget {
                           fontWeight: FontWeight.bold,
                           color: Theme.of(context).colorScheme.onBackground,
                         ),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: FutureBuilder(
+                    future: Peer2PeerLib.instance.add(1, 2),
+                    builder: (context, snapshot) {
+                      if (snapshot.hasData) {
+                        return Text(snapshot.data.toString());
+                      } else if (snapshot.hasError) {
+                        return Text(snapshot.error.toString());
+                      } else {
+                        return const Text('Loading...');
+                      }
+                    },
                   ),
                 ),
                 _LanguagesSelector(Localization.supportedLocales),

@@ -4,8 +4,8 @@ repository: https://github.com/kushalmahapatro/scribble
 sdkPath: .fvm/flutter_sdk
 
 packages:
-  - scribble/*
-  - packages/**
+  - packages/packages/flutter_peer2peer
+  - packages/packages/peer2peer
 
 command:
   bootstrap:
@@ -25,7 +25,6 @@ scripts:
   generate:
     run: flutter pub global run intl_utils:generate 
       && dart run build_runner build --delete-conflicting-outputs 
-      && cargo build
     description: Generate code for a specific package in this project.
 
   analyze:
@@ -39,26 +38,6 @@ scripts:
   format:
     exec: dart format .
     description: Format a specific package in this project.
-
-  version:
-    description: Updates version numbers in all build files
-    run: bash scripts/version.sh
-
-  build:
-    run: melos run build:apple && melos run build:android && melos run build:other
-    description: Build all native libraries for the project.
-
-  build:apple:
-    run: bash scripts/build-apple.sh
-    description: Build the XCFramework for iOS and macOS.
-
-  build:android:
-    run: bash scripts/build-android.sh
-    description: Build the .tar.gz for Android.
-
-  build:other:
-    run: bash scripts/build-other.sh
-    description: Build the .tar.gz for all other platforms.
 
   dart:version:
     exec: dart --version
